@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AR WEATHER</title>
+        <script>
+            var weather
+            function weatherForcast(){
+                weather=document.getElementById("weather").value
+                if(weather=="sunny"||weather=="cloudy"||weather=="snowing"){
+                    alert("you're good to go!")
+                }else if(weather=="raining"||weather=="hail"||weather=="sleet"){
+                    alert("not now...")
+                }else{
+                    alert("enter valid weather")
+                }
+            }
+            function temperature(){
+                alert(document.getElementById("temp").value+273.15)
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="weather" value="enter weather"/><input type="button" onclick="weatherForcast()" value="click here to see result"/>
+        <input type="text" id="temp" value="enter temperature in kelvin"/><input type="button" onclick="temperature()" value="click here to see temperature in centigrade"/>
+    </body>
+</html>
